@@ -1,1 +1,1169 @@
+/* ==========================================================
+   PROFESSOR NOTA 10
+   style.css
+========================================================== */
 
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #46352d;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==========================================================
+   FUNDO
+========================================================== */
+
+.fundo {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(246, 237, 255, 0.96),
+            rgba(255, 245, 229, 0.96)
+        ),
+
+        url("../imagens/fundo.jpg");
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* ==========================================================
+   APLICAÇÃO
+========================================================== */
+
+.app {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+/* ==========================================================
+   TELAS
+========================================================== */
+
+.tela {
+
+    display: none;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        25px 15px;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.tela.ativa {
+
+    display: flex;
+
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.card {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    border-radius: 28px;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px
+        rgba(80, 45, 110, 0.16);
+
+    border:
+        1px solid
+        rgba(120, 80, 160, 0.12);
+
+    animation:
+        aparecer 0.5s ease;
+
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   TELA INICIAL
+========================================================== */
+
+.iconeTopo {
+
+    font-size: 4rem;
+
+    margin-bottom: 15px;
+
+    animation:
+        flutuar 2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+
+    }
+
+}
+
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding:
+        7px 14px;
+
+    border-radius: 30px;
+
+    background:
+        #f0e7ff;
+
+    color:
+        #7342b5;
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            2.2rem,
+            8vw,
+            3.5rem
+        );
+
+    line-height:
+        1.05;
+
+    margin:
+        18px 0;
+
+    color:
+        #533b68;
+
+}
+
+
+h1 strong {
+
+    color:
+        #d48a32;
+
+}
+
+
+.textoPrincipal {
+
+    font-size:
+        1.05rem;
+
+    line-height:
+        1.65;
+
+    color:
+        #6d5c52;
+
+}
+
+
+.professorEmoji {
+
+    font-size:
+        2rem;
+
+    margin:
+        25px 0;
+
+}
+
+
+.pequeno {
+
+    margin-top:
+        15px;
+
+    color:
+        #9a8980;
+
+    font-size:
+        0.8rem;
+
+}
+
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.btn {
+
+    border:
+        none;
+
+    border-radius:
+        16px;
+
+    padding:
+        16px 22px;
+
+    font-size:
+        0.95rem;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.25s ease;
+
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.btn:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+.btnPrincipal {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7546c6,
+            #9b5de5
+        );
+
+    color:
+        white;
+
+    box-shadow:
+        0 10px 25px
+        rgba(117,70,198,0.25);
+
+}
+
+
+#btnComecar {
+
+    width:
+        100%;
+
+    margin-top:
+        5px;
+
+}
+
+
+.btnHomenagem {
+
+    width:
+        100%;
+
+    margin-top:
+        25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e58a38,
+            #d96363
+        );
+
+    color:
+        white;
+
+    font-size:
+        1rem;
+
+}
+
+
+.btnSecundario {
+
+    margin-top:
+        20px;
+
+    background:
+        #f1ebf7;
+
+    color:
+        #68458d;
+
+}
+
+
+/* ==========================================================
+   QUIZ
+========================================================== */
+
+.quizCard {
+
+    max-width:
+        600px;
+
+}
+
+
+.topoQuiz {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        10px;
+
+    font-size:
+        0.82rem;
+
+    color:
+        #806d61;
+
+}
+
+
+.barra {
+
+    width:
+        100%;
+
+    height:
+        9px;
+
+    background:
+        #eee5f5;
+
+    border-radius:
+        20px;
+
+    overflow:
+        hidden;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.progresso {
+
+    width:
+        0%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7546c6,
+            #d48a32
+        );
+
+    border-radius:
+        inherit;
+
+    transition:
+        width 0.4s ease;
+
+}
+
+
+.perguntaArea {
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.emojiPergunta {
+
+    font-size:
+        3rem;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.perguntaArea h2 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    color:
+        #533b68;
+
+    font-size:
+        clamp(
+            1.35rem,
+            5vw,
+            1.8rem
+        );
+
+    line-height:
+        1.35;
+
+}
+
+
+/* ==========================================================
+   ALTERNATIVAS
+========================================================== */
+
+.alternativas {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        12px;
+
+}
+
+
+.alternativa {
+
+    width:
+        100%;
+
+    padding:
+        15px 17px;
+
+    text-align:
+        left;
+
+    border:
+        2px solid
+        #eee5f5;
+
+    border-radius:
+        15px;
+
+    background:
+        white;
+
+    color:
+        #54443b;
+
+    font-size:
+        0.95rem;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.25s ease;
+
+}
+
+
+.alternativa:hover {
+
+    border-color:
+        #9b5de5;
+
+    background:
+        #faf7ff;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+.alternativa.correta {
+
+    background:
+        #e9f8ed;
+
+    border-color:
+        #4caf68;
+
+    color:
+        #27743d;
+
+}
+
+
+.alternativa.errada {
+
+    background:
+        #fff0f0;
+
+    border-color:
+        #df6868;
+
+    color:
+        #9c3838;
+
+}
+
+
+.alternativa.desabilitada {
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ==========================================================
+   FEEDBACK
+========================================================== */
+
+.feedback {
+
+    min-height:
+        30px;
+
+    margin:
+        15px 0;
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        700;
+
+}
+
+
+.feedback.correto {
+
+    color:
+        #33854a;
+
+}
+
+
+.feedback.errado {
+
+    color:
+        #ad4646;
+
+}
+
+
+.btnProxima {
+
+    width:
+        100%;
+
+    margin-top:
+        5px;
+
+}
+
+
+/* ==========================================================
+   RESULTADO
+========================================================== */
+
+.resultadoCard {
+
+    max-width:
+        520px;
+
+}
+
+
+.iconeResultado {
+
+    font-size:
+        4.5rem;
+
+    margin-bottom:
+        15px;
+
+    animation:
+        flutuar 2s infinite;
+
+}
+
+
+.resultadoTexto {
+
+    font-size:
+        1rem;
+
+    color:
+        #6d5c52;
+
+    line-height:
+        1.6;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.nota {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        4px;
+
+    padding:
+        18px;
+
+    background:
+        #faf6ff;
+
+    border-radius:
+        18px;
+
+    margin:
+        20px 0;
+
+}
+
+
+.nota span {
+
+    font-size:
+        0.8rem;
+
+    color:
+        #8d7b98;
+
+}
+
+
+.nota strong {
+
+    font-size:
+        2rem;
+
+    color:
+        #7546c6;
+
+}
+
+
+.mensagemResultado {
+
+    color:
+        #75655b;
+
+    line-height:
+        1.5;
+
+}
+
+
+.tituloNota10 {
+
+    margin:
+        22px 0 15px;
+
+    color:
+        #d48a32;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        1.55rem;
+
+}
+
+
+/* ==========================================================
+   HOMENAGEM
+========================================================== */
+
+.homenagemCard {
+
+    max-width:
+        650px;
+
+}
+
+
+.iconeHomenagem {
+
+    font-size:
+        4rem;
+
+    animation:
+        pulsar 1.5s ease-in-out infinite;
+
+}
+
+
+@keyframes pulsar {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.12);
+
+    }
+
+}
+
+
+.mensagemHomenagem {
+
+    color:
+        #695950;
+
+    line-height:
+        1.7;
+
+    font-size:
+        1rem;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.mensagemHomenagem strong {
+
+    color:
+        #7546c6;
+
+}
+
+
+/* ==========================================================
+   VÍDEO
+========================================================== */
+
+.videoContainer {
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        18px;
+
+    background:
+        #211a25;
+
+    margin:
+        20px 0;
+
+}
+
+
+.videoContainer video {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-height:
+        500px;
+
+}
+
+
+/* ==========================================================
+   ÁUDIO
+========================================================== */
+
+.audioContainer {
+
+    padding:
+        17px;
+
+    border-radius:
+        17px;
+
+    background:
+        #faf6ff;
+
+    border:
+        1px solid
+        #eee4f6;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-top:
+        18px;
+
+}
+
+
+.iconeAudio {
+
+    font-size:
+        1.8rem;
+
+}
+
+
+.audioContainer strong {
+
+    color:
+        #68458d;
+
+}
+
+
+.audioContainer p {
+
+    font-size:
+        0.8rem;
+
+    color:
+        #8a7b71;
+
+    margin-top:
+        3px;
+
+}
+
+
+.audioContainer audio {
+
+    width:
+        100%;
+
+    margin-top:
+        8px;
+
+}
+
+
+/* ==========================================================
+   MENSAGEM FINAL
+========================================================== */
+
+.mensagemFinal {
+
+    margin-top:
+        28px;
+
+    padding:
+        25px 15px;
+
+    border-top:
+        1px solid
+        #eee4d7;
+
+}
+
+
+.coracao {
+
+    font-size:
+        2.5rem;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.mensagemFinal p {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        1.35rem;
+
+    color:
+        #654a78;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.mensagemFinal strong {
+
+    color:
+        #d48a32;
+
+    font-size:
+        1.3rem;
+
+}
+
+
+/* ==========================================================
+   CONFETES
+========================================================== */
+
+#confettiCanvas {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    pointer-events:
+        none;
+
+    z-index:
+        9999;
+
+}
+
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .tela {
+
+        padding:
+            15px 10px;
+
+    }
+
+
+    .card {
+
+        padding:
+            27px 20px;
+
+        border-radius:
+            22px;
+
+    }
+
+
+    .iconeTopo {
+
+        font-size:
+            3.3rem;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            2.25rem;
+
+    }
+
+
+    .textoPrincipal {
+
+        font-size:
+            0.95rem;
+
+    }
+
+
+    .perguntaArea h2 {
+
+        font-size:
+            1.3rem;
+
+    }
+
+
+    .alternativa {
+
+        font-size:
+            0.9rem;
+
+        padding:
+            14px;
+
+    }
+
+
+    .tituloNota10 {
+
+        font-size:
+            1.35rem;
+
+    }
+
+}
