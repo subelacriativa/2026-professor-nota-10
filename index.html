@@ -1,1 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#6c3fc7"
+    >
+
+    <meta
+        name="description"
+        content="Presente Interativo — Professor Nota 10"
+    >
+
+    <title>Professor Nota 10 🎓</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         FUNDO
+    =================================================== -->
+
+    <div
+        class="fundo"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- ==================================================
+         APLICAÇÃO
+    =================================================== -->
+
+    <main class="app">
+
+
+        <!-- ==================================================
+             TELA 1 — BOAS-VINDAS
+        =================================================== -->
+
+        <section
+            id="telaInicio"
+            class="tela ativa"
+        >
+
+            <div class="card">
+
+
+                <div class="iconeTopo">
+                    🎓
+                </div>
+
+
+                <span class="etiqueta">
+                    PRESENTE INTERATIVO
+                </span>
+
+
+                <h1>
+                    Professor<br>
+                    <strong>Nota 10!</strong>
+                </h1>
+
+
+                <p class="textoPrincipal">
+
+                    Você recebeu uma missão especial.
+
+                    <br><br>
+
+                    Será que consegue provar que é
+                    realmente um
+
+                    <strong>
+                        Professor Nota 10?
+                    </strong>
+
+                </p>
+
+
+                <div class="professorEmoji">
+                    👩‍🏫 ❤️ 👨‍🏫
+                </div>
+
+
+                <button
+                    id="btnComecar"
+                    class="btn btnPrincipal"
+                >
+                    COMEÇAR O DESAFIO 🚀
+                </button>
+
+
+                <p class="pequeno">
+                    São apenas algumas perguntinhas... 😉
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             TELA 2 — QUIZ
+        =================================================== -->
+
+        <section
+            id="telaQuiz"
+            class="tela"
+        >
+
+            <div class="card quizCard">
+
+
+                <!-- PROGRESSO -->
+
+                <div class="topoQuiz">
+
+                    <span id="numeroPergunta">
+                        Pergunta 1 de 5
+                    </span>
+
+                    <span id="pontuacao">
+                        0 pontos
+                    </span>
+
+                </div>
+
+
+                <div class="barra">
+
+                    <div
+                        id="barraProgresso"
+                        class="progresso"
+                    ></div>
+
+                </div>
+
+
+                <!-- PERGUNTA -->
+
+                <div class="perguntaArea">
+
+                    <div
+                        id="emojiPergunta"
+                        class="emojiPergunta"
+                    >
+                        🤔
+                    </div>
+
+
+                    <h2 id="pergunta">
+                        Carregando pergunta...
+                    </h2>
+
+                </div>
+
+
+                <!-- ALTERNATIVAS -->
+
+                <div
+                    id="alternativas"
+                    class="alternativas"
+                >
+                </div>
+
+
+                <!-- FEEDBACK -->
+
+                <div
+                    id="feedback"
+                    class="feedback"
+                >
+                </div>
+
+
+                <button
+                    id="btnProxima"
+                    class="btn btnPrincipal btnProxima"
+                    style="display: none;"
+                >
+                    PRÓXIMA ➜
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             TELA 3 — RESULTADO
+        =================================================== -->
+
+        <section
+            id="telaResultado"
+            class="tela"
+        >
+
+            <div class="card resultadoCard">
+
+
+                <div
+                    id="iconeResultado"
+                    class="iconeResultado"
+                >
+                    🏆
+                </div>
+
+
+                <span class="etiqueta">
+                    DESAFIO CONCLUÍDO
+                </span>
+
+
+                <h1>
+                    Resultado
+                </h1>
+
+
+                <div
+                    id="resultadoTexto"
+                    class="resultadoTexto"
+                >
+                </div>
+
+
+                <div class="nota">
+
+                    <span>
+                        Sua pontuação
+                    </span>
+
+                    <strong id="pontuacaoFinal">
+                        0/5
+                    </strong>
+
+                </div>
+
+
+                <p class="mensagemResultado">
+
+                    Depois de analisar cuidadosamente
+                    suas respostas...
+
+                </p>
+
+
+                <h2 class="tituloNota10">
+
+                    🏆 PROFESSOR NOTA 10! 🏆
+
+                </h2>
+
+
+                <p>
+
+                    Mas espere...
+
+                    <br><br>
+
+                    Você acaba de desbloquear
+                    uma surpresa especial.
+
+                </p>
+
+
+                <button
+                    id="btnHomenagem"
+                    class="btn btnHomenagem"
+                >
+                    💝 ABRIR MINHA HOMENAGEM
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             TELA 4 — HOMENAGEM
+        =================================================== -->
+
+        <section
+            id="telaHomenagem"
+            class="tela"
+        >
+
+            <div class="card homenagemCard">
+
+
+                <div class="iconeHomenagem">
+                    ❤️
+                </div>
+
+
+                <span class="etiqueta">
+                    UMA HOMENAGEM PARA VOCÊ
+                </span>
+
+
+                <h1>
+                    Obrigado,<br>
+                    Professor!
+                </h1>
+
+
+                <p class="mensagemHomenagem">
+
+                    Ensinar é muito mais do que
+                    transmitir conhecimento.
+
+                    <br><br>
+
+                    É inspirar, acreditar, incentivar
+                    e deixar marcas que permanecem
+                    para toda a vida.
+
+                    <br><br>
+
+                    <strong>
+                        Obrigado por fazer a diferença.
+                    </strong>
+
+                </p>
+
+
+                <!-- ==================================================
+                     VÍDEO
+                =================================================== -->
+
+                <div class="videoContainer">
+
+                    <video
+                        id="videoHomenagem"
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+
+                        <source
+                            src="video/homenagem.mp4"
+                            type="video/mp4"
+                        >
+
+                        Seu navegador não suporta
+                        reprodução de vídeo.
+
+                    </video>
+
+                </div>
+
+
+                <!-- ==================================================
+                     ÁUDIO
+                =================================================== -->
+
+                <div class="audioContainer">
+
+                    <div class="iconeAudio">
+                        🎵
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Uma música especial
+                        </strong>
+
+                        <p>
+                            Para acompanhar este momento.
+                        </p>
+
+                    </div>
+
+
+                    <audio
+                        id="audioHomenagem"
+                        controls
+                        preload="metadata"
+                    >
+
+                        <source
+                            src="audio/musica.mp3"
+                            type="audio/mpeg"
+                        >
+
+                        Seu navegador não suporta
+                        reprodução de áudio.
+
+                    </audio>
+
+                </div>
+
+
+                <!-- ==================================================
+                     MENSAGEM FINAL
+                =================================================== -->
+
+                <div class="mensagemFinal">
+
+                    <div class="coracao">
+                        ❤️
+                    </div>
+
+                    <p>
+
+                        Feliz Dia dos Professores!
+
+                    </p>
+
+                    <strong>
+
+                        Você é Nota 10!
+
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="btnReiniciar"
+                    class="btn btnSecundario"
+                >
+                    🔄 Jogar novamente
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         CONFETES
+    =================================================== -->
+
+    <canvas
+        id="confettiCanvas"
+    ></canvas>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"
+    ></script>
+
+
+    <script
+        src="js/script.js"
+    ></script>
+
+
+</body>
+
+</html>
