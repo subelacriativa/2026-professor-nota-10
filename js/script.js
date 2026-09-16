@@ -12,7 +12,7 @@ const perguntas = [
 
     {
         pergunta:
-            "Qual é o verdadeiro superpoder de um professor?",
+            "Qual é o verdadeiro superpoder de um(a) professor(a)?",
 
         emoji:
             "🦸‍♀️",
@@ -36,7 +36,7 @@ const perguntas = [
 
     {
         pergunta:
-            "Qual frase um professor provavelmente já ouviu muitas vezes?",
+            "Qual frase o(a) professor(a) provavelmente já ouviu muitas vezes?",
 
         emoji:
             "😂",
@@ -60,10 +60,10 @@ const perguntas = [
 
     {
         pergunta:
-            "O que nunca pode faltar na rotina de um professor?",
+            "O que nunca pode faltar na rotina de um(a) professor(a)?",
 
         emoji:
-            "☕",
+            "🤔",
 
         alternativas: [
 
@@ -84,7 +84,7 @@ const perguntas = [
 
     {
         pergunta:
-            "Qual destas características combina com um Professor Nota 10?",
+            "Qual destas características combina com um(a) Professor(a) Nota 10?",
 
         emoji:
             "⭐",
@@ -121,7 +121,7 @@ const perguntas = [
 
             "Um café gigante",
 
-            "O título de Professor Nota 10!"
+            "O título de Professor(a) Nota 10!"
 
         ],
 
@@ -534,19 +534,19 @@ function finalizarQuiz() {
     ) {
 
         mensagem =
-            "Impressionante! Você acertou todas! Parece que o título de Professor Nota 10 já era seu mesmo! 😍";
+            "Impressionante! Você acertou todas! Parece que o título de Professor(a) Nota 10 já era seu mesmo! 😍";
 
     } else if (
         pontos >= 3
     ) {
 
         mensagem =
-            "Excelente resultado! Você provou que merece o título de Professor Nota 10! 🌟";
+            "Excelente resultado! Você provou que merece o título de Professor(a) Nota 10! 🌟";
 
     } else {
 
         mensagem =
-            "O resultado pouco importa... depois de tudo que você faz, você continua sendo um Professor Nota 10! ❤️";
+            "O resultado pouco importa... depois de tudo que você faz, você continua sendo um(a) Professor(a) Nota 10! ❤️";
 
     }
 
