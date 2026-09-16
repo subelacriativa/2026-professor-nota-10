@@ -261,6 +261,7 @@ function mostrarTela(tela) {
    COMEÇAR
 ========================================================== */
 
+/*=========================================
 btnComecar.addEventListener(
     "click",
     () => {
@@ -279,7 +280,32 @@ btnComecar.addEventListener(
 
     }
 );
+=====================================================*/
 
+/*===INSERI O CÓDIGO ABAIXO PARA TESTE. SE NÃO FUNCIONAR, USAR O CÓDIGO ACIMA===*/
+
+btnComecar.addEventListener(
+    "click",
+    () => {
+
+        perguntaAtual = 0;
+        pontos = 0;
+        respondeu = false;
+
+        mostrarTela(telaQuiz);
+        carregarPergunta();
+
+        // Inicia a música de fundo após o primeiro clique
+        const audio = document.getElementById("audioFundo");
+        if (audio) {
+            audio.volume = 0.4; // Ajuste de volume de 0.0 a 1.0
+            audio.play().catch(erro => {
+                console.log("A reprodução foi bloqueada pelo navegador:", erro);
+            });
+        }
+
+    }
+);
 
 /* ==========================================================
    CARREGAR PERGUNTA
