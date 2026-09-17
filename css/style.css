@@ -58,7 +58,7 @@ body {
 }
 
 .logoRodape {
-    max-width: 120px; /* Ajuste o tamanho da logo aqui */
+    max-width: 90px; /* Ajuste o tamanho da logo aqui */
     height: auto;
     display: block;
 }
