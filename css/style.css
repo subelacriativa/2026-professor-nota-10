@@ -37,6 +37,35 @@ body {
 
 
 /* ==========================================================
+   LOGO RODAPÉ
+========================================================== */
+
+.rodapeLogo {
+    margin-top: 25px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodapeLogo a {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.rodapeLogo a:hover {
+    transform: scale(1.06);
+}
+
+.logoRodape {
+    max-width: 120px; /* Ajuste o tamanho da logo aqui */
+    height: auto;
+    display: block;
+}
+
+
+
+/* ==========================================================
    FUNDO
 ========================================================== */
 
